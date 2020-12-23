@@ -15,7 +15,9 @@ function Cover() {
 Aprovecha!
                 </p>
             </div>
+            
         </div>
+        
         
   )
 };

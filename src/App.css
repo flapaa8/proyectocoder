@@ -431,6 +431,44 @@ input[type="radio"]{
   color: #fff;
 }
 
+/*Carrito*/
+.item-list{
+  width: 300px;
+  padding: 20px;
+  padding-bottom: 40px;
+  box-shadow: -10px   0   20px   -30px    black ;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  height: 330px;
+  right: 0;
+}
+.item-list:before{
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #46a2fd ;
+}
+.btn-il{
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 5px    20px;
+  font-size: 16px;
+  background: #5ad156;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  flex-direction: row;
+}
+.total{
+  flex-direction: row;
+
+}
 @media screen and (max-width: 1200px){
   .posts{
       grid-template-columns: repeat(3, 1fr);

@@ -443,6 +443,9 @@ input[type="radio"]{
   background: #fff;
   height: 330px;
   right: 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
 }
 .item-list:before{
   content: "";
@@ -452,6 +455,7 @@ input[type="radio"]{
   top: 0;
   right: 0;
   background: #46a2fd ;
+  display: flex;
 }
 .btn-il{
   margin-top: 15px;

@@ -1,5 +1,6 @@
 import React from 'react';
-import Header from './Header'
+import Header from './Header';
+import ContainerAll from './ContainerAll';
 import './App.css';
 
 
@@ -7,9 +8,10 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header></Header>
-    </div>
+    <body>
+      <Header/>
+      <ContainerAll/>
+    </body>
   );
 }
 

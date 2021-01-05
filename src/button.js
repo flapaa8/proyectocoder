@@ -1,22 +1,30 @@
-import React, { Component } from 'react';
+import React,  { useState } from 'react';
 import './App.css';
 
-class Button extends Component {
+function Button() {
    
-    constructor(props) {
-        super(props)
-        this.state= {counter: 0}
+    const [ counterHP20, setCounter ] = useState(0);
+    function add() {
+        setCounter(counterHP20+1)
     }
-    add() {
-        this.setState({counter:this.state.counter + 1})
-        
+    function substract() {
+        setCounter(counterHP20-1)
     }
-   render(){
+    function addToCart() {
+        console.log("Agregado")
+    }
+ 
     return (
-        <button onClick={this.add.bind(this)} >Comprar!: {this.state.counter} </button>
+        <div>
+        <h2>{counterHP20} </h2>
+        <button onClick={add} >Sumar</button> 
+        <button onClick={substract}>Restar</button>
+        <button onClick={addToCart}>Agregar al carro</button>
+        </div>
+        
         
     );
-}
+
   }
 
 

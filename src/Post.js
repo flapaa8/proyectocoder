@@ -1,5 +1,6 @@
 import React from 'react';
 import p20 from './images/p20hu.webp'
+import Button from './button'
 import './App.css';
 
 
@@ -16,7 +17,7 @@ function Post() {
               <li>$24.000</li>
               
             </ul>
-            <a href="#"><button>Comprar!</button></a>
+            <Button/>
           </div>
     )
   };

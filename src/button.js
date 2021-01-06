@@ -5,10 +5,16 @@ function Button() {
    
     const [ counter, setCounter ] = useState(0);
     function add() {
-        setCounter(counter+1)
+        
+        if (counter<10)
+        {setCounter(counter+1)}
     }
     function substract() {
-        setCounter(counter-1)
+        
+        if (counter>0)
+        {setCounter(counter-1)}
+            
+        
     }
     function addToCart() {
         console.log("Agregado")
@@ -25,7 +31,7 @@ function Button() {
         
     );
 
-  }
+}
 
 
 

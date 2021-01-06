@@ -15,12 +15,12 @@ function ContainerPost() {
         <ContainerCategory/>   
         <div className="SHOW">  
         <Posts/>
-        <ItemList/>
+        
         </div>
         
           </div>
     )
   };
 
-
+/*<ItemList/>*/
 export default ContainerPost;

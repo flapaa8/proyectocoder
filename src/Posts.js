@@ -4,13 +4,16 @@ import './App.css';
 
 
 function Posts() {
-    return (
+
+   
+  return (
           
         <div className="posts">
           <Post/>
         
         </div>
     )
+    
   };
 
 

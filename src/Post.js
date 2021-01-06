@@ -6,7 +6,7 @@ import './App.css';
 
 
 function Post() {
-  setTimeout(function(){useState}, 3000);
+  
           const [post, postState] = useState([
             
             {title:"Huawei P20", detail:"64Gb Almacenamiento 4Gb RAM" ,price:"24.000", img:p20},

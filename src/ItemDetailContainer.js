@@ -4,27 +4,24 @@ import p20 from './images/p20hu.webp'
 import MG5P from './images/MG5P.jpg'
 import Button from './button'
 import './App.css';
+import ItemDetail from './itemDetail';
 
-const productos = [
+const productos = 
   {
     title:"Huawei P20", 
     detail:"64Gb Almacenamiento 4Gb RAM" ,
     price:"24.000", 
     img:p20
-  },
-  {
-    title:"Moto G5 Plus", 
-    detail:"64Gb Almacenamiento 2Gb RAM" ,
-    price:"17.500", 
-    img:MG5P
   }
-]
+  
+
 function Post() {
   
   const [products, setProducts] = useState([
             
             
           ]);
+          
           useEffect(() => {
             // Armamos nuestra promise (también la podríamos armar fuera del componente). La promise toma dos parametros, que se resuelva bien o sea rechazada. En nuestro caso va a ser siempre resuelta bien, pero podría ser que nosotros le pedimos info a un servidor y falla
     const promesa = new Promise((resolve, reject) => {
@@ -38,23 +35,18 @@ function Post() {
       .then(result => setProducts(result))  // Si salió bien,  le vamos a mandar el listad ode productos al estado
       .catch(err => console.log("Algo salio mal")); // Solo avisamos que algo salió mal
   }, [products]);
-          return  <div> 
-            {products.map((u) => 
-            <div class="post" data-category="HTML">
-            <div class="ctn-img">
-              <img src={u.img} alt="" />
-            </div>
-            <h2>{u.title}</h2>
-            <span>{u.detail}</span>
-            <ul class="ctn-tag">
-              <li>{u.price}</li>
-              
-            </ul>
-            <Button/>
-          </div>)}
-          </div>
-    
-  };
-
-
+          return  (
+         <div>
+           { productos ?
+           <ItemDetail
+           title={productos.title}
+          detail={productos.detail}
+          price={productos.price}
+          img={productos.img}
+          />
+          :
+          <h2>Articulo</h2>}
+         </div>
+  
+         )   }
 export default Post;

@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState , setItems} from 'react';
 import { useEffect } from 'react'
 import p20 from './images/p20hu.webp'
 import MG5P from './images/MG5P.jpg'
 import Button from './button'
 import './App.css';
 import ItemDetail from './itemDetail';
+import { useParams} from 'react-router-dom';
 
 const productos = 
   {
+    category:"TODOS",
+    categoryId:"Otros",
     title:"Huawei P20", 
     detail:"64Gb Almacenamiento 4Gb RAM" ,
     price:"24.000", 
@@ -21,8 +24,15 @@ function Post() {
             
             
           ]);
-          
+          const { id } = useParams()
           useEffect(() => {
+            if(id){
+              const category = products.filter(product => product.categoryId === id)
+              setItems(category)
+          }
+          else{
+            setItems(products)
+        }
             // Armamos nuestra promise (también la podríamos armar fuera del componente). La promise toma dos parametros, que se resuelva bien o sea rechazada. En nuestro caso va a ser siempre resuelta bien, pero podría ser que nosotros le pedimos info a un servidor y falla
     const promesa = new Promise((resolve, reject) => {
       // Acá va nuestra tarea. En este caso, un setTimeout

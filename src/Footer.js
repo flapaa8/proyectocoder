@@ -1,5 +1,5 @@
 import React from 'react'; 
-import icon from './images/icon.jpg'
+import icon from './images/icon.jpg';
 import './App.css';
 
 
@@ -29,7 +29,7 @@ function Footer() {
         </footer>
         </div>
     )
-  };
+  }
 
 
 export default Footer;

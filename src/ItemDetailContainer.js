@@ -2,7 +2,7 @@ import React, { useState , setItems} from 'react';
 import { useEffect } from 'react'
 import p20 from './images/p20hu.webp'
 import MG5P from './images/MG5P.jpg'
-import Button from './button'
+
 import './App.css';
 import ItemDetail from './itemDetail';
 import { useParams} from 'react-router-dom';

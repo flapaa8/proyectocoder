@@ -2,7 +2,7 @@ import React from 'react';
 import Cover from './Cover';
 import ContainerPost from './ContainerPost';
 import ButtonUp from './ButtonUp';
-import Footer from './Footer'
+
 import './App.css';
 
 
@@ -15,7 +15,7 @@ function ContainerAll() {
       <Cover/>
       <ContainerPost/>
       <ButtonUp/>
-      <Footer/>
+      
     </div>
   );
 }
